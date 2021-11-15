@@ -9,7 +9,6 @@ if __name__ == "__main__":
    # Frequency might not actually be degree exactly 4 since we are doing sampling with replacement
    support = np.array([np.random.randint(0,n) for _ in range(degree)], dtype = int)
    frequency[support] = 1
-   m = int(np.floor(2 * degree * np.log2(n)))
    cs_matrix = np.random.randint(0, 2, (m, n))
    y = np.dot(cs_matrix, frequency) % 2
    print(y, cs_matrix, frequency)
@@ -42,6 +41,6 @@ if __name__ == "__main__":
    result = {"status": np.array_equal(sol, frequency),  "time":end_time-start_time, \
               "n":n, "m":m, "d":degree
               }
-
+   print(result)
 with open(f"results/n={n}_m={m}_d={degree}_{try_number}.json", "w") as f:
    json.dump(result, f)
