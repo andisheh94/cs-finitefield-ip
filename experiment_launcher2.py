@@ -1,6 +1,6 @@
 import os
 import numpy as np
-for n in [4, 8, 16, 32, 64, 128, 256]:
+for n in [ 512, 1024, 2048, 4096]:
     for degree in [2, 3, 5, 10]:
         my_range = np.linspace(0.5 *degree*np.log2(n), 5 * degree*np.log2(n), 40)
         m_list = [int(a) for a in my_range]
