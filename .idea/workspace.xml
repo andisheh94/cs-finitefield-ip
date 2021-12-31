@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="457e76f0-a128-4d50-825b-8e7c633f032c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment_launcher.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scip_solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/scip_solver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plotter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/plotter.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="7fc528b8-b842-4211-b64d-f1f0b889e0ef" />
   <component name="ProjectId" id="208bWX7WGaAJllYJqnNqbFO6zjK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -106,7 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1635429193685</updated>
       <workItem from="1635429195614" duration="7135000" />
-      <workItem from="1636984925013" duration="8014000" />
+      <workItem from="1636984925013" duration="10860000" />
+      <workItem from="1640091969809" duration="170000" />
     </task>
     <servers />
   </component>
@@ -118,30 +118,30 @@
       <screen x="0" y="25" width="2560" height="1327" />
     </state>
     <state x="108" y="347" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.2560.1327@0.25.2560.1327" timestamp="1635843682794" />
-    <state width="1214" height="341" key="GridCell.Tab.0.bottom" timestamp="1636993539886">
+    <state width="1214" height="341" key="GridCell.Tab.0.bottom" timestamp="1637604713582">
       <screen x="0" y="25" width="2560" height="1327" />
     </state>
-    <state width="1214" height="341" key="GridCell.Tab.0.bottom/0.25.2560.1327@0.25.2560.1327" timestamp="1636993539886" />
-    <state width="1214" height="341" key="GridCell.Tab.0.center" timestamp="1636993539885">
+    <state width="1214" height="341" key="GridCell.Tab.0.bottom/0.25.2560.1327@0.25.2560.1327" timestamp="1637604713582" />
+    <state width="1214" height="341" key="GridCell.Tab.0.center" timestamp="1637604713581">
       <screen x="0" y="25" width="2560" height="1327" />
     </state>
-    <state width="1214" height="341" key="GridCell.Tab.0.center/0.25.2560.1327@0.25.2560.1327" timestamp="1636993539885" />
-    <state width="1214" height="341" key="GridCell.Tab.0.left" timestamp="1636993539885">
+    <state width="1214" height="341" key="GridCell.Tab.0.center/0.25.2560.1327@0.25.2560.1327" timestamp="1637604713581" />
+    <state width="1214" height="341" key="GridCell.Tab.0.left" timestamp="1637604713580">
       <screen x="0" y="25" width="2560" height="1327" />
     </state>
-    <state width="1214" height="341" key="GridCell.Tab.0.left/0.25.2560.1327@0.25.2560.1327" timestamp="1636993539885" />
-    <state width="1214" height="341" key="GridCell.Tab.0.right" timestamp="1636993539885">
+    <state width="1214" height="341" key="GridCell.Tab.0.left/0.25.2560.1327@0.25.2560.1327" timestamp="1637604713580" />
+    <state width="1214" height="341" key="GridCell.Tab.0.right" timestamp="1637604713581">
       <screen x="0" y="25" width="2560" height="1327" />
     </state>
-    <state width="1214" height="341" key="GridCell.Tab.0.right/0.25.2560.1327@0.25.2560.1327" timestamp="1636993539885" />
+    <state width="1214" height="341" key="GridCell.Tab.0.right/0.25.2560.1327@0.25.2560.1327" timestamp="1637604713581" />
     <state x="153" y="324" key="SettingsEditor" timestamp="1635430046848">
       <screen x="0" y="25" width="2560" height="1327" />
     </state>
     <state x="153" y="324" key="SettingsEditor/0.25.2560.1327@0.25.2560.1327" timestamp="1635430046848" />
-    <state x="352" y="517" key="com.intellij.ide.util.TipDialog" timestamp="1636985645019">
+    <state x="352" y="517" key="com.intellij.ide.util.TipDialog" timestamp="1640942081477">
       <screen x="0" y="25" width="2560" height="1327" />
     </state>
-    <state x="352" y="517" key="com.intellij.ide.util.TipDialog/0.25.2560.1327@0.25.2560.1327" timestamp="1636985645019" />
+    <state x="352" y="517" key="com.intellij.ide.util.TipDialog/0.25.2560.1327@0.25.2560.1327" timestamp="1640942081477" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/random_measurements$scip_solver.coverage" NAME="scip_solver Coverage Results" MODIFIED="1636993537797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
