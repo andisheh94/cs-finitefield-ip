@@ -1,6 +1,6 @@
 import sys
 import numpy as np
-from pyscipopt import Model
+from pyscipopt import Model, quicksum
 import time
 import json
 if __name__ == "__main__":
@@ -30,13 +30,15 @@ if __name__ == "__main__":
    # add the constraints for measurments
    for i in range(m):
       cons = [vars[j] for j in range(n) if cs_matrix[i][j]==1]
-      # print(cons)
+      print(cons)
       model.addConsXor(cons, True if y[i]==1 else False)
+   # add extra constraint for degree
+   model.addCons(quicksum(vars[j] for j in range(n)) <= degree )
    # Find solution
    model.optimize()
-   sol = model.getBestSol()
+   sol = model.getSols()
    end_time = time.time()
-   sol = np.array([int(sol[vars[j]]) for j in range(n)], dtype=int)
+   # sol = np.array([int(sol[vars[j]]) for j in range(n)], dtype=int)
    print(sol, frequency)
    result = {"status": np.array_equal(sol, frequency),  "time":end_time-start_time, \
               "n":n, "m":m, "d":degree
