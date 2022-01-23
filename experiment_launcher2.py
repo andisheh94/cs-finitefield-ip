@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import numpy as np
 for n in [512, 1024, 2048, 4096]:
-    for degree in [4,2, 3,  5]:
+    for degree in [2, 3, 4, 5]:
         my_range = np.linspace(0.4 *degree*np.log2(n), 6 * degree*np.log2(n), 50)
         m_list = [int(a) for a in my_range]
         for m in m_list:
