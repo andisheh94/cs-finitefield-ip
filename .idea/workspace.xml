@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="457e76f0-a128-4d50-825b-8e7c633f032c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/random_binning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scip_solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/scip_solver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/plotter-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/plotter-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plotter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/plotter.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,21 +77,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scip_solver" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="random_binning" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="random_measurements" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/opt/anaconda3/envs/ml4co/bin/python" />
+      <option name="SDK_HOME" value="/opt/anaconda3/envs/scip/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scip_solver.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/random_binning.py" />
+      <option name="PARAMETERS" value="10 4 2 1.5 3 0" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -114,14 +116,28 @@
       <workItem from="1640091969809" duration="170000" />
       <workItem from="1642071395852" duration="5370000" />
       <workItem from="1642084341506" duration="1070000" />
-      <workItem from="1642085541741" duration="2469000" />
+      <workItem from="1642085541741" duration="3786000" />
+      <workItem from="1642166221448" duration="5843000" />
+      <workItem from="1642929852236" duration="4560000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/random_measurements$scip_solver.coverage" NAME="scip_solver Coverage Results" MODIFIED="1636993537797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cs_finitefield_ip$scip_solver.coverage" NAME="random_binning Coverage Results" MODIFIED="1642938179990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
