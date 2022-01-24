@@ -61,7 +61,7 @@ if __name__ == "__main__":
             measurements.append(shift)
             recovery_dict[iter][bin].append((index, bit))
             index += 1
-      B = int(floor(B / ratio))
+      B = ceil(B / ratio)
    # Construct measurement matrix
    no_binary_measurements = len(measurements)
    measurement_matrix = np.zeros((no_binary_measurements, n), dtype=int)
@@ -114,8 +114,8 @@ if __name__ == "__main__":
    Store results
    """
    result = {"status": np.array_equal(current_estimate, frequency),  "time":end_time-start_time, \
-              "n":n, "no_bins":no_bins, "no_iterations":no_iterations,"ratio":ratio, "d":degree \
-              }
+              "n":n, "no_bins":no_bins, "no_iterations":no_iterations,"ratio":ratio, "d":degree, \
+              "measurements":no_binary_measurements}
    print(result)
    with open(f"results2/n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}_{try_number}.json", "w") as f:
       json.dump(result, f)

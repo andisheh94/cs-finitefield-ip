@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="457e76f0-a128-4d50-825b-8e7c633f032c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/random_binning.py" afterDir="false" />
+    <list default="true" id="457e76f0-a128-4d50-825b-8e7c633f032c" name="Default Changelist" comment="added randombinning module">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_01_22,_12_50_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_01_22__12_50__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment_launcher_binning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/plotter-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/plotter-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/plotter.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_launcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment_launcher_random.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment_launcher2.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment_launcher_random2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/random_binning.py" beforeDir="false" afterPath="$PROJECT_DIR$/random_binning.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +57,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -118,8 +123,16 @@
       <workItem from="1642084341506" duration="1070000" />
       <workItem from="1642085541741" duration="3786000" />
       <workItem from="1642166221448" duration="5843000" />
-      <workItem from="1642929852236" duration="4560000" />
+      <workItem from="1642929852236" duration="9314000" />
     </task>
+    <task id="LOCAL-00001" summary="added randombinning module">
+      <created>1642938661303</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642938661303</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +148,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added randombinning module" />
+    <option name="LAST_COMMIT_MESSAGE" value="added randombinning module" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/random_measurements$scip_solver.coverage" NAME="scip_solver Coverage Results" MODIFIED="1636993537797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
