@@ -1,3 +1,5 @@
 logs/
 results/
 results2/
+.DS_Store
+.idea
