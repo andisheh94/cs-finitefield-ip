@@ -1,0 +1,111 @@
+Sender: LSF System <lsfadmin@eu-g1-006-1>
+Subject: Job 201584577: <python -u random_binning.py 256 25 5 1.6 5 9> in cluster <euler> Exited
+
+Job <python -u random_binning.py 256 25 5 1.6 5 9> was submitted from host <eu-login-34> by user <amrollaa> in cluster <euler> at Mon Jan 24 11:35:17 2022
+Job was executed on host(s) <eu-g1-006-1>, in queue <normal.4h>, as user <amrollaa> in cluster <euler> at Mon Jan 24 11:35:25 2022
+</cluster/home/amrollaa> was used as the home directory.
+</cluster/project/infk/krause/andisheh/cs-finitefiled-ip> was used as the working directory.
+Started at Mon Jan 24 11:35:25 2022
+Terminated at Mon Jan 24 11:35:26 2022
+Results reported at Mon Jan 24 11:35:26 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python -u random_binning.py 256 25 5 1.6 5 9
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.13 sec.
+    Max Memory :                                 8 MB
+    Average Memory :                             -
+    Total Requested Memory :                     4000.00 MB
+    Delta Memory :                               3992.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   19 sec.
+    Turnaround time :                            9 sec.
+
+The output (if any) follows:
+
+Traceback (most recent call last):
+  File "random_binning.py", line 2, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+Sender: LSF System <lsfadmin@eu-g1-018-1>
+Subject: Job 201584622: <python -u random_binning.py 256 25 5 1.6 5 9> in cluster <euler> Done
+
+Job <python -u random_binning.py 256 25 5 1.6 5 9> was submitted from host <eu-login-34> by user <amrollaa> in cluster <euler> at Mon Jan 24 11:36:54 2022
+Job was executed on host(s) <eu-g1-018-1>, in queue <normal.4h>, as user <amrollaa> in cluster <euler> at Mon Jan 24 11:37:25 2022
+</cluster/home/amrollaa> was used as the home directory.
+</cluster/project/infk/krause/andisheh/cs-finitefiled-ip> was used as the working directory.
+Started at Mon Jan 24 11:37:25 2022
+Terminated at Mon Jan 24 11:37:27 2022
+Results reported at Mon Jan 24 11:37:27 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python -u random_binning.py 256 25 5 1.6 5 9
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.43 sec.
+    Max Memory :                                 48 MB
+    Average Memory :                             26.67 MB
+    Total Requested Memory :                     4000.00 MB
+    Delta Memory :                               3952.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   25 sec.
+    Turnaround time :                            33 sec.
+
+The output (if any) follows:
+
+{'status': True, 'time': 0.0022525787353515625, 'n': 256, 'no_bins': 25, 'no_iterations': 5, 'ratio': 1.6, 'd': 5, 'measurements': 349}
+Sender: LSF System <lsfadmin@eu-g1-006-1>
+Subject: Job 201584828: <python -u random_binning.py 256 25 5 1.6 5 9> in cluster <euler> Done
+
+Job <python -u random_binning.py 256 25 5 1.6 5 9> was submitted from host <eu-login-34> by user <amrollaa> in cluster <euler> at Mon Jan 24 11:39:06 2022
+Job was executed on host(s) <eu-g1-006-1>, in queue <normal.4h>, as user <amrollaa> in cluster <euler> at Mon Jan 24 11:39:25 2022
+</cluster/home/amrollaa> was used as the home directory.
+</cluster/project/infk/krause/andisheh/cs-finitefiled-ip> was used as the working directory.
+Started at Mon Jan 24 11:39:25 2022
+Terminated at Mon Jan 24 11:39:27 2022
+Results reported at Mon Jan 24 11:39:27 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python -u random_binning.py 256 25 5 1.6 5 9
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.34 sec.
+    Max Memory :                                 48 MB
+    Average Memory :                             -
+    Total Requested Memory :                     4000.00 MB
+    Delta Memory :                               3952.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   9 sec.
+    Turnaround time :                            21 sec.
+
+The output (if any) follows:
+
+{'status': True, 'time': 0.002493619918823242, 'n': 256, 'no_bins': 25, 'no_iterations': 5, 'ratio': 1.6, 'd': 5, 'measurements': 351}
