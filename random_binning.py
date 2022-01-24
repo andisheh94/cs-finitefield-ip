@@ -77,7 +77,6 @@ if __name__ == "__main__":
    support = np.array([np.random.randint(0,n) for _ in range(degree)], dtype = int)
    frequency[support] = 1
    measurement_binary = np.dot(measurement_matrix, frequency) % 2
-   # print(y, cs_matrix, frequency)
    """
    Recover the frequency
    """
@@ -109,14 +108,13 @@ if __name__ == "__main__":
       current_estimate = (current_estimate + residual_estimate) % 2
 
    end_time = time.time()
-   # print(sol, frequency)
    """
    Store results
    """
    result = {"status": np.array_equal(current_estimate, frequency),  "time":end_time-start_time, \
               "n":n, "no_bins":no_bins, "no_iterations":no_iterations,"ratio":ratio, "d":degree, \
               "measurements":no_binary_measurements}
-   print(result)
+   # print(result)
    with open(f"results2/n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}_{try_number}.json", "w") as f:
       json.dump(result, f)
 
