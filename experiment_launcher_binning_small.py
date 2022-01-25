@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import numpy as np
 from math import ceil
-submitted_jobs = set()
+# submitted_jobs = set()
 for n in [4, 8, 16, 32, 64, 128, 256, 512]:
     for degree in [2,3,4,5]:
         no_bins_range = np.linspace(0.1 * degree**2,  degree**2, 10)
@@ -23,4 +23,4 @@ for n in [4, 8, 16, 32, 64, 128, 256, 512]:
                             if submit_string not in submitted_jobs:
                                 os.system(submit_string)
                                 print(submit_string)
-                                submitted_jobs.add(submit_string)
+                                # submitted_jobs.add(submit_string)
