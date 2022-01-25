@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="457e76f0-a128-4d50-825b-8e7c633f032c" name="Default Changelist" comment="Added random binning experiment launcher">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experiment_launcher_binning.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment_launcher_binning.py" afterDir="false" />
     </list>
@@ -117,7 +116,7 @@
       <workItem from="1642084341506" duration="1070000" />
       <workItem from="1642085541741" duration="3786000" />
       <workItem from="1642166221448" duration="5843000" />
-      <workItem from="1642929852236" duration="9681000" />
+      <workItem from="1642929852236" duration="10373000" />
     </task>
     <task id="LOCAL-00001" summary="added randombinning module">
       <created>1642938661303</created>
