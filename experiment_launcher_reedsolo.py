@@ -11,7 +11,7 @@ for n in [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 9192]:
             submit_string = f"bsub -W 3:59 "\
                             f" -o logs3/log_n={n}_d={degree}.txt"\
                             f" -R rusage[mem=4000] "\
-                            f"python -u random_binning.py {n} {degree} "\
+                            f"python -u reed_solomon.py {n} {degree} "\
                             f"&> /dev/null"
             if args.dryrun:
                 os.system(submit_string)
