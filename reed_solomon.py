@@ -11,7 +11,7 @@ class ReedSolomonCS:
         self.degree = degree
         # Finite field of 2 ** (self.p)
         self.p = 0
-        while 2 ** self.p < n:
+        while 2 ** self.p <= n:
             self.p += 1
         if 2 * degree >= n:
             raise ValueError("2*d hast to be strictly less than n")
@@ -82,24 +82,31 @@ if __name__ == "__main__":
     n, degree = [int(sys.argv[j]) for j in [1, 2]]
     reed_solo = ReedSolomonCS(n, degree)
     measurement_matrix = reed_solo.get_measurement_matrix()
-    """
-    Cosntruct a test frequency
-    """
-    frequency = np.array([0] * n, dtype=int)
-    # Frequency might not actually be degree exactly 4 since we are doing sampling with replacement
-    support = np.array([np.random.randint(0, n) for _ in range(degree)], dtype=int)
-    frequency[support] = 1
-    measurement_binary = np.dot(measurement_matrix, frequency) % 2
-    """
-    Recover the frequency
-    """
-    start_time = time.time()
-    estimate = reed_solo.recover_vector(measurement_binary)
-    end_time = time.time()
+    
+    times = []
+    statuses = [] 
+    for _ in range(100):
+        """
+        Cosntruct a test frequency
+        """
+        frequency = np.array([0] * n, dtype=int)
+        # Frequency might not actually be degree exactly "degree" since we are doing sampling with replacement
+        support = np.array([np.random.randint(0, n) for _ in range(degree)], dtype=int)
+        frequency[support] = 1
+        measurement_binary = np.dot(measurement_matrix, frequency) % 2
+        """
+        Recover the frequency
+        """
+        print(frequency, measurement_binary)
+        start_time = time.time()
+        estimate = reed_solo.recover_vector(measurement_binary)
+        end_time = time.time()
+        times.append(end_time-start_time)
+        statuses.append(np.array_equal(estimate, frequency))
     """
     Store results
     """
-    result = {"status": np.array_equal(estimate, frequency), "time": end_time - start_time, \
+    result = {"statuses": statuses,  "times": times, \
               "n": n, "d": degree, "measurements": reed_solo.no_binary_measurements}
     with open(f"results3/n={n}_d={degree}.json","w") as f:
         json.dump(result, f)
