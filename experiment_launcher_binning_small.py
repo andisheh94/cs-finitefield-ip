@@ -21,6 +21,6 @@ for n in [4, 8, 16, 32, 64, 128, 256, 512]:
                                             f"&> /dev/null"
 
                             if submit_string not in submitted_jobs:
-                                os.system(submit_string)
+                                # os.system(submit_string)
                                 print(submit_string)
                                 submitted_jobs.add(submit_string)
