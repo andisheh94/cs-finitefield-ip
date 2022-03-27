@@ -5,6 +5,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--dryrun', action='store_false')
 args = parser.parse_args()
 for n in [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 9192, 2**14, 2**15, 2**16]:
+    n = 3*n//2 
     for degree in [2 , 3, 4, 5]:
         path = Path(f"results3/n={n}_d={degree}.json")
         if not path.is_file():

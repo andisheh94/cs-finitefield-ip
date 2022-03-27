@@ -3,8 +3,9 @@ from pathlib import Path
 import numpy as np
 from math import ceil
 submitted_jobs = set()
-for n in [2**14, 2**15, 2**16]:
-    for degree in [2,3,4,5]:
+for n in [1024, 2048, 4096, 2**13, 2**14, 2**15, 2**16]:
+    n = 3*n //2 
+    for degree in [2,3,4,5,6]:
         no_bins_range = np.linspace(0.1 * degree**2,  degree**2, 10)
         no_bins_range = [ceil(a) for a in no_bins_range]
         for no_bins in no_bins_range:
