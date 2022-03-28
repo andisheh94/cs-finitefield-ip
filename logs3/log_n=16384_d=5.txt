@@ -142,3 +142,51 @@ Traceback (most recent call last):
   File "/cluster/project/infk/krause/andisheh/miniconda/envs/ml4co/lib/python3.9/site-packages/reedsolo.py", line 443, in gf_poly_mul
     r[i + j] ^= gf_exp[lp[i] + lq]  # equivalent to: r[i + j] = gf_add(r[i+j], gf_mul(p[i], q[j]))
 KeyboardInterrupt
+Sender: LSF System <lsfadmin@eu-a2p-411>
+Subject: Job 210664992: <python -u reed_solomon.py 16384 5> in cluster <euler> Exited
+
+Job <python -u reed_solomon.py 16384 5> was submitted from host <eu-login-17> by user <amrollaa> in cluster <euler> at Wed Mar 23 21:18:45 2022
+Job was executed on host(s) <eu-a2p-411>, in queue <normal.120h>, as user <amrollaa> in cluster <euler> at Wed Mar 23 22:15:37 2022
+</cluster/home/amrollaa> was used as the home directory.
+</cluster/project/infk/krause/andisheh/cs-finitefiled-ip> was used as the working directory.
+Started at Wed Mar 23 22:15:37 2022
+Terminated at Sun Mar 27 19:22:16 2022
+Results reported at Sun Mar 27 19:22:16 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python -u reed_solomon.py 16384 5
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 130.
+
+Resource usage summary:
+
+    CPU time :                                   330815.25 sec.
+    Max Memory :                                 585 MB
+    Average Memory :                             369.61 MB
+    Total Requested Memory :                     40000.00 MB
+    Delta Memory :                               39415.00 MB
+    Max Swap :                                   25 MB
+    Max Processes :                              3
+    Max Threads :                                4
+    Run time :                                   331606 sec.
+    Turnaround time :                            335011 sec.
+
+The output (if any) follows:
+
+Traceback (most recent call last):
+  File "/cluster/project/infk/krause/andisheh/cs-finitefiled-ip/reed_solomon.py", line 83, in <module>
+    reed_solo = ReedSolomonCS(n, degree)
+  File "/cluster/project/infk/krause/andisheh/cs-finitefiled-ip/reed_solomon.py", line 23, in __init__
+    self.generator_polynomial = rs.rs_generator_poly_all(n)[self.no_check_symbols]
+  File "/cluster/project/infk/krause/andisheh/miniconda/envs/ml4co/lib/python3.9/site-packages/reedsolo.py", line 526, in rs_generator_poly_all
+    g_all[nsym] = rs_generator_poly(nsym, fcr, generator)
+  File "/cluster/project/infk/krause/andisheh/miniconda/envs/ml4co/lib/python3.9/site-packages/reedsolo.py", line 517, in rs_generator_poly
+    g = gf_poly_mul(g, [1, gf_pow(generator, i + fcr)])
+  File "/cluster/project/infk/krause/andisheh/miniconda/envs/ml4co/lib/python3.9/site-packages/reedsolo.py", line 443, in gf_poly_mul
+    r[i + j] ^= gf_exp[lp[i] + lq]  # equivalent to: r[i + j] = gf_add(r[i+j], gf_mul(p[i], q[j]))
+KeyboardInterrupt
