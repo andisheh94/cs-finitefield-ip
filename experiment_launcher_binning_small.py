@@ -16,7 +16,7 @@ for n in [16, 32, 64, 128, 256, 512]:
                         # if True:
                         if not path.is_file():
                             submit_string = f"bsub -W 0:20"\
-                                            f" -o logs22/log_n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}_{try_no}.json"\
+                                            f" -o logs2/log_n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}_{try_no}.json"\
                                             f" -R rusage[mem=1000] "\
                                             f"python -u random_binning.py {n} {no_bins} {no_iterations} {ratio} {degree} {try_no} "\
                                             f"&> /dev/null"
