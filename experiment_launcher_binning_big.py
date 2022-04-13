@@ -3,21 +3,21 @@ from pathlib import Path
 import numpy as np
 from math import ceil
 submitted_jobs = set()
-for n in [1024, 2048, 4096, 2**13, 2**14, 2**15, 2**16]:
-    n = 3*n //2 
-    for degree in [2,3,4,5,6]:
-        no_bins_range = np.linspace(0.1 * degree**2,  degree**2, 10)
+for n in [1024, 2048, 4096, 8192]:
+    n = 3*n //2
+    for degree in [2, 4, 6, 8, 10, 20]:
+        no_bins_range = np.linspace(0.2 * degree**2,  degree**2, 10)
         no_bins_range = [ceil(a) for a in no_bins_range]
         for no_bins in no_bins_range:
-            for no_iterations in [1,2,3,4,5]:
-                for ratio in [1.2,1.3,1.4,1.5,1.6]:
+            for no_iterations in [1, 2, 3]:
+                for ratio in [1.1, 1.3, 1.5, 1.9, 2.1, 3]:
                     for try_no in range(10):
                         path = Path(f"results2/n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}_{try_no}.json")
                         # if True:
                         if not path.is_file():
-                            submit_string = f"bsub -W 3:59 "\
-                                            f" -o logs2/log_n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}_{try_no}.txt"\
-                                            f" -R rusage[mem=4000] "\
+                            submit_string = f"bsub -W 0:20"\
+                                            f" -o logs22/log_n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}_{try_no}.json"\
+                                            f" -R rusage[mem=1000] "\
                                             f"python -u random_binning.py {n} {no_bins} {no_iterations} {ratio} {degree} {try_no} "\
                                             f"&> /dev/null"
 
