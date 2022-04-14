@@ -23,5 +23,5 @@ for n in [16, 32, 64, 128, 256, 512]:
 
                             if submit_string not in submitted_jobs:
                                 # os.system(submit_string)
-                                print(submit_string)
+                                print(submit_string, ratio)
                                 submitted_jobs.add(submit_string)
