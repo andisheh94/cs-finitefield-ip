@@ -10,7 +10,7 @@ for n in [1024, 2048, 4096, 8192]:
         no_bins_range = [ceil(a) for a in no_bins_range]
         for no_bins in no_bins_range:
             for no_iterations in [1, 2, 3]:
-                for ratio in [1.1, 1.3, 1.5, 1.9, 2.1, 3]:
+                for ratio in [1.1, 1.3, 1.5, 1.9, 2.1, 3.0]:
                     for try_no in range(10):
                         path = Path(f"results2/n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}_{try_no}.json")
                         # if True:
@@ -22,6 +22,6 @@ for n in [1024, 2048, 4096, 8192]:
                                             f"&> /dev/null"
 
                             if submit_string not in submitted_jobs:
-                                os.system(submit_string)
+                                # os.system(submit_string)
                                 print(submit_string)
                                 submitted_jobs.add(submit_string)
