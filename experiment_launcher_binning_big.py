@@ -6,7 +6,8 @@ submitted_jobs = set()
 for n in [1024, 2048, 4096, 8192]:
     n = 3*n //2
     for degree in [2, 4, 6, 8, 10, 20]:
-        no_bins_range = np.linspace(0.2 * degree**2,  degree**2, 10)
+        no_bins_range = np.linspace(0.2 * degree**2 if degree<10  else 0.05 * degree**2,
+                                degree**2 if degree<10 else 0.5 * degree**2, 10)
         no_bins_range = [ceil(a) for a in no_bins_range]
         for no_bins in no_bins_range:
             for no_iterations in [1, 2, 3]:
