@@ -2,7 +2,11 @@ import os
 from pathlib import Path
 import numpy as np
 from math import ceil
-
+import argparse
+parser = argparse.ArgumentParser(description='Run the tests for the random binning approach')
+parser.add_argument('--dryrun', action='store_true')
+args = parser.parse_args()
+dry_run = args.dryrun
 for n in [16, 32, 64, 128, 256, 512]:
     n = 3*n // 2
     for degree in [2, 3, 4, 5, 6, 7, 8, 10, 20]:
@@ -25,6 +29,6 @@ for n in [16, 32, 64, 128, 256, 512]:
                                     f" -o logs2/log_n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}.txt" \
                                     f" -R rusage[mem=10000] \"{submit_string}\" " \
                                     f"&> /dev/null"
-
-                        # os.system(submit_string)
+                        if not dry_run:
+                            os.system(submit_string)
                         print(submit_string)
