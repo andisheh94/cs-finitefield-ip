@@ -110,7 +110,7 @@ if __name__ == "__main__":
     result = {"p_success": p_success , "time_median": np.median(times), \
               "times_mean": np.median(times), "times_std": np.std(times),
               "n": n, "no_bins": no_bins, "no_iterations": no_iterations, "ratio": ratio, "d": degree, \
-              "measurements": no_binary_measurements}
+              "measurements": no_binary_measurements, "try_number": try_number}
     print(result)
     with open(f"results2/n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}_{try_number}.json",
               "w") as f:
