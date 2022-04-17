@@ -20,10 +20,11 @@ for n in [16, 32, 64, 128, 256, 512]:
                             submit_string = submit_string + f"python -u random_binning.py {n} {no_bins} {no_iterations} {ratio} {degree} {try_no}"
                             if try_no != 9:
                                 submit_string = submit_string + " && "
-                    submit_string = "bsub -W 0:20" \
+                    if submit_string != "":
+                        submit_string = "bsub -W 0:20" \
                                     f" -o logs2/log_n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}.json" \
                                     f" -R rusage[mem=10000] {submit_string} " \
                                     f"&> /dev/null"
 
-                    # os.system(submit_string)
-                    print(submit_string)
+                        # os.system(submit_string)
+                        print(submit_string)
