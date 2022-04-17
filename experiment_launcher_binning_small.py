@@ -22,7 +22,7 @@ for n in [16, 32, 64, 128, 256, 512]:
                                 submit_string = submit_string + " && "
                     if submit_string != "":
                         submit_string = "bsub -W 0:20" \
-                                    f" -o logs2/log_n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}.json" \
+                                    f" -o logs2/log_n={n}_nobins={no_bins}_no_iter={no_iterations}_ratio={ratio}_d={degree}.txt" \
                                     f" -R rusage[mem=10000] {submit_string} " \
                                     f"&> /dev/null"
 
