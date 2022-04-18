@@ -11,7 +11,7 @@ n_to_mem = {24:"1000", 48:"4000", 96:"4000", 192:"10000", 384:"10000", 768:"1000
 for n in [16, 32, 64, 128, 256, 512]:
     n = 3*n//2 
     for degree in [2, 3, 4, 5]:
-        my_range = np.linspace(0.2 *degree*np.log2(n), 2.5 * degree*np.log2(n), 30)
+        my_range = np.linspace(0.1 * degree*np.log2(n), 2.5 * degree*np.log2(n), 40)
         m_list = [int(a) for a in my_range]
         for m in m_list:
             for try_no in range(10):
