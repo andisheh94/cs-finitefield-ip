@@ -41,9 +41,23 @@ if __name__ == "__main__":
     end_time = time.time()
     sol = np.array([int(sol[vars[j]]) for j in range(n)], dtype=int)
     # print(sol, frequency)
-    result = {"status": np.array_equal(sol, frequency),  "time":end_time-start_time, \
-              "n":n, "m":m, "d":degree
-              }
+    print(np.dot(cs_matrix, sol) % 2, y)
+    if model.getStatus() == "infeasible":
+        result = {"model_status": "infeasible", "time": end_time - start_time,
+                  "n": n, "m": m, "d": degree
+                  }
+    else:
+        sol = model.getBestSol()
+        sol = np.array([int(sol[vars[j]]) for j in range(n)], dtype=int)
+        # print(sol, frequency)
+        result = {"model_status": model.getStatus(),
+                  "solution_has_correct_degree": bool(np.sum(sol) <= degree),
+                  "solution_satisfies_constraints": np.array_equal(np.dot(cs_matrix, sol) % 2, y),
+                  "equal": np.array_equal(sol, frequency),
+                  "time": end_time - start_time,
+                  "n": n, "m": m, "d": degree
+                  }
+
     # print(result)
     with open(f"results/n={n}_m={m}_d={degree}_{try_number}.json", "w") as f:
         json.dump(result, f)
