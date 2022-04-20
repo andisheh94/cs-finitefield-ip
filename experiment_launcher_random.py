@@ -8,7 +8,7 @@ args = parser.parse_args()
 dry_run = args.dryrun
 n_to_time = {24:"3:59", 48:"3:59", 96:"3:59", 192:"23:59", 384:"23:59", 768:"123:59"}
 n_to_mem = {24:"1000", 48:"4000", 96:"4000", 192:"10000", 384:"10000", 768:"10000"}
-for n in [16, 32, 64, 128, 256, 512]:
+for n in [16, 32, 64, 128, 256]:
     n = 3*n//2 
     for degree in [2, 3, 4, 5]:
         my_range = np.linspace(0.1 * degree*np.log2(n), 2.5 * degree*np.log2(n), 40)
