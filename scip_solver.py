@@ -28,6 +28,7 @@ if __name__ == "__main__":
             objective = vars[0]
         else:
             objective = objective + vars[j]
+    model.setObjective(objective)
     # add the constraints for measurments
     for i in range(m):
         cons = [vars[j] for j in range(n) if cs_matrix[i][j]==1]
@@ -55,6 +56,6 @@ if __name__ == "__main__":
                   "n": n, "m": m, "d": degree
                   }
 
-    # print(result)
+    print(result)
     with open(f"results/n={n}_m={m}_d={degree}_{try_number}.json", "w") as f:
         json.dump(result, f)
