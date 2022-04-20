@@ -37,11 +37,8 @@ if __name__ == "__main__":
     model.addCons(quicksum(vars[j] for j in range(n)) <= degree )
     # Find solution
     model.optimize()
-    sol = model.getBestSol()
     end_time = time.time()
-    sol = np.array([int(sol[vars[j]]) for j in range(n)], dtype=int)
     # print(sol, frequency)
-    print(np.dot(cs_matrix, sol) % 2, y)
     if model.getStatus() == "infeasible":
         result = {"model_status": "infeasible", "time": end_time - start_time,
                   "n": n, "m": m, "d": degree
