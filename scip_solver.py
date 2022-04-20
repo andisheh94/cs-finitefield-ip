@@ -21,6 +21,7 @@ if __name__ == "__main__":
     model.setParam("presolving/maxrounds", 0)
     vars = [0] * n
     objective = None
+    optimize_failed = False
     #Vars and objective
     for j in range(n):
         vars[j] = model.addVar(f'x_{j}', vtype="B")
@@ -37,25 +38,31 @@ if __name__ == "__main__":
     # add extra constraint for degree
     model.addCons(quicksum(vars[j] for j in range(n)) <= degree )
     # Find solution
-    model.optimize()
+    try:
+        model.optimize()
+    except:
+        optimize_failed = True
     end_time = time.time()
     # print(sol, frequency)
     if model.getStatus() == "infeasible":
         result = {"model_status": "infeasible", "time": end_time - start_time,
-                  "n": n, "m": m, "d": degree
+                  "n": n, "m": m, "d": degree, "optimize_failed":optimize_failed
                   }
     else:
-        sol = model.getBestSol()
-        sol = np.array([int(sol[vars[j]]) for j in range(n)], dtype=int)
-        # print(sol, frequency)
-        result = {"model_status": model.getStatus(),
-                  "solution_has_correct_degree": bool(np.sum(sol) <= degree),
-                  "solution_satisfies_constraints": np.array_equal(np.dot(cs_matrix, sol) % 2, y),
-                  "equal": np.array_equal(sol, frequency),
-                  "time": end_time - start_time,
-                  "n": n, "m": m, "d": degree
-                  }
-
+        try:
+            sol = model.getBestSol()
+            sol = np.array([int(sol[vars[j]]) for j in range(n)], dtype=int)
+            # print(sol, frequency)
+            result = {"model_status": model.getStatus(),
+                      "solution_has_correct_degree": bool(np.sum(sol) <= degree),
+                      "solution_satisfies_constraints": np.array_equal(np.dot(cs_matrix, sol) % 2, y),
+                      "equal": np.array_equal(sol, frequency),
+                      "time": end_time - start_time,
+                      "n": n, "m": m, "d": degree,
+                      "optimize_failed": optimize_failed
+                      }
+        except:
+            result = "something super super super weird happend"
     print(result)
     with open(f"results/n={n}_m={m}_d={degree}_{try_number}.json", "w") as f:
         json.dump(result, f)
