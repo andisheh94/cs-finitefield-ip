@@ -17,7 +17,7 @@ for n in [16, 32, 64, 128, 256]:
             for try_no in range(10):
             # print(f"bsub -W 3:59 -o logs/log_n={n}_m={m}_d={degree}_{try_no}.out -R rusage[mem=10000] python -u scip_solver.py {n} {m} {degree} {try_no}")
                 path = Path(f"results/n={n}_m={m}_d={degree}_{try_no}.json")
-                if path.is_file():
+                if not path.is_file():
                     submit_string = f"bsub -W {n_to_time[n]} -o logs/log_n={n}_m={m}_d={degree}_{try_no}.out -R rusage[mem={n_to_mem[n]}] python -u scip_solver.py {n} {m} {degree} {try_no}  &> /dev/null"
                     if not dry_run:
                         os.system(submit_string)
