@@ -6,7 +6,7 @@ parser.add_argument('--dryrun', action='store_false')
 args = parser.parse_args()
 for n in [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192]:
     n = 3*n//2 
-    for degree in  [2, 4, 6, 8, 10, 20]:
+    for degree in  [2, 3, 4, 5,  6, 7, 8, 10, 20]:
         path = Path(f"results3/n={n}_d={degree}.json")
         if not path.is_file():
             submit_string = f"bsub -W 123:59 "\
